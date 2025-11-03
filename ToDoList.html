@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To Do List</title>
+        <meta charset="utf-8">
+        <style>
+            div {
+                border: 2px solid black;
+                width: 40%;
+                text-align: center;
+                padding: 1em;
+                border-radius: 1em;
+            }
+            h1 {
+                text-align: center;
+            }
+
+            #item {
+                background-color: rgb(100, 200, 300);
+            }
+
+        </style>
+        <script src="ToDoList.js" defer></script>
+    </head>
+
+    <body>
+        <div>
+            <h1>To-Do List</h1>
+            <input type="text" id="item" onclick="blue()" placeholder="Add an item!">
+            <input type="submit" value="Submit" onclick="addItem()">
+            <input type="button" value="Clear List" onclick="clearList()">
+        </div>
+        <ol id="list"></ol>
+    </body>
+</html>

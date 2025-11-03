@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Expense Tracker</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1, h2, button {
+                position: relative;
+                left: 11%;
+            }
+
+            input, button {
+                margin-top: 1em;
+            }
+            div {
+                position: relative;
+                left: 30%;
+               
+            }
+
+            table {
+                border: 2px solid black;
+                margin-top: 2em;
+                border-collapse: collapse;
+                width: 48%;
+            }
+            td, th {
+                border: 2px solid black;
+                text-align: left;
+                padding: 5px;
+            }
+
+        </style>
+        <script src="ExpenseTracker.js" defer></script>
+    </head>
+
+    <body>
+        <div>
+        <h1>Expense Tracker</h1>
+        <h2 style="color: green;">Add A New Item:</h2>
+
+        <label for="name">Name: </label><input type="text" id="name" placeholder="Where was the expense made?" style="width: 50em;"><br>
+        <label for="date">Date: </label><input type="date" id="date" style="width: 20em;">
+        <label for="amount">Amount: </label><input type="text" id="amount" style="width: 25em;"><br>
+        <button id="addExpense" style="background-color: green; color: white;" onclick="addItem()">Add Expense</button>
+
+        <table id="expseLst">
+            <tr id="tblHead">
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+            </tr>
+
+            <tr id="noExpse" style="background-color: lightgray;">
+                <td colspan="3">No expenses added yet!</td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>
